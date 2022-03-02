@@ -12,7 +12,7 @@ const LoginScreen = () => {
 
 		>
 			<View style = {styles.titleContainer}>
-				<Text style={styles.titleText}> TODOLU </Text>
+				<Text style={styles.titleText}> POMODORO PAL </Text>
 			</View>
 
 			<View style={styles.inputContainer}>
@@ -41,9 +41,9 @@ const LoginScreen = () => {
 
 				<TouchableOpacity
 					onPress = {() => { }}
-					style={[styles.button, styles.buttonOutline]}
+					style={styles.buttonOutline}
 				>
-					<Text style={styles.buttonOutlineText}>Register</Text>
+					<Text style={styles.buttonOutlineText}>Need an Account? Click Here</Text>
 				</TouchableOpacity>
 			</View>
 
@@ -58,15 +58,19 @@ const styles = StyleSheet.create({
 		flex: 1,
 		justifyContent: 'center',
 		alignItems: 'center',
+		backgroundColor: '#263238',
 	},
 
 	titleContainer: {
 		padding: 30,
+		justifyContent: 'center',
+		alignItems: 'center',
 	},
 
 	titleText: {
 		fontWeight: 'bold',
-		fontSize: 40,
+		color: '#B9BCC2',
+		fontSize: 30,
 	},
 
 	inputContainer: {
@@ -84,12 +88,11 @@ const styles = StyleSheet.create({
 	buttonContainer: {
 		width: '60%',
 		justifyContent: 'center',
-		alignItems: 'center',
 		marginTop: 40,
 	},
 
 	button: {
-		backgroundColor: '#0782F9',
+		backgroundColor: '#085097',
 		width: '100',
 		padding: 15,
 		borderRadius: 10,
@@ -97,21 +100,19 @@ const styles = StyleSheet.create({
 	},
 
 	buttonOutline: {
-		backgroundColor: 'white',
-		marginTop: 5,
-		borderColor: '#0782F9',
-		borderWidth: 2,
+		marginTop: 15,
+		alignItems: 'center',
 	},
 
 	buttonText: {
-		color: 'white',
+		color: '#B9BCC2',
 		fontWeight: '700',
-		fontSize: '16',
+		fontSize: 16,
 	},
 
 	buttonOutlineText: {
-		color: '#0782F9',
+		color: '#B9BCC2',
 		fontWeight: '700',
-		fontSize: '16',
+		fontSize: 16,
 	},
 })
