@@ -1,18 +1,28 @@
 import react, {useState} from 'react'
-import { TextInput, Button, StyleSheet, Text, KeyboardAvoidingView, TouchableOpacity, View} from 'react-native'
+import { Platform, Image, TextInput, Button, StyleSheet, Text, KeyboardAvoidingView, TouchableOpacity, View} from 'react-native'
+import {LinearGradient} from 'expo-linear-gradient';
 
 const LoginScreen = () => {
 	const [email, setEmail] = useState ('')
 	const [password, setPassword] = useState ('')
 
 	return(
+  <LinearGradient
+    colors={['#373B44', '#4286f4', '#373B44']}
+    style={{
+      flex: 1,
+    }}
+  >
 		<KeyboardAvoidingView
 			style={styles.container}
 			behavior="padding"
 
 		>
 			<View style = {styles.titleContainer}>
-				<Text style={styles.titleText}> POMODORO PAL </Text>
+				<Image 
+				style={styles.logo}
+				source={require('../assets/Logo.png')}/>
+				<Text style={styles.titleText}> TODOLU </Text>
 			</View>
 
 			<View style={styles.inputContainer}>
@@ -29,6 +39,11 @@ const LoginScreen = () => {
 					style={styles.input}
 					secureTextEntry
 				/>
+				<TouchableOpacity
+					onPress = {() => { }}
+				>
+					<Text style ={styles.forgetlink}> Forgot Password? </Text>
+				</TouchableOpacity>
 			</View>
 
 			<View style={styles.buttonContainer}>
@@ -47,7 +62,11 @@ const LoginScreen = () => {
 				</TouchableOpacity>
 			</View>
 
+			<View style={styles.bottomContainer}>
+				<Text style={styles.footerText}>Created Using React Native </Text>					
+			</View>
 		</KeyboardAvoidingView>
+		 </LinearGradient> //remove this code to remove background
 	)
 }
 
@@ -56,13 +75,24 @@ export default LoginScreen
 const styles = StyleSheet.create({
 	container: {
 		flex: 1,
-		justifyContent: 'center',
 		alignItems: 'center',
-		backgroundColor: '#263238',
+		//backgroundColor: '#263238',
+	},
+
+	logo: {
+	resizeMode: 'contain',
+	width: 169, 
+	height: 183, 
+	shadowOffset: {
+		width: 0,
+		height: 0,
+	},
+	shadowOpacity: 0.1,
+	shadowRadius: 2,
 	},
 
 	titleContainer: {
-		padding: 30,
+		padding: 10,
 		justifyContent: 'center',
 		alignItems: 'center',
 	},
@@ -80,9 +110,16 @@ const styles = StyleSheet.create({
 	input: {
 		backgroundColor: 'white',
 		paddingHorizontal: 15,
-		paddingVertical: 10,
-		borderRadius: 10,
-		marginTop: 5,
+		paddingVertical: 12,
+		borderRadius: 15,
+		marginTop: 15,
+	},
+
+	forgetlink: {
+		marginTop: 10,
+		color: '#B9BCC2',
+		fontSize: 14,
+		textAlign: 'right',
 	},
 
 	buttonContainer: {
@@ -115,4 +152,25 @@ const styles = StyleSheet.create({
 		fontWeight: '700',
 		fontSize: 16,
 	},
+
+	bottomContainer:{
+		width: '100%',
+		height: 50,
+		position: 'absolute',
+		bottom: 0,
+		justifyContent: 'center',
+		alignItems: 'center',
+		width: '100%',
+		height: 50,
+		backgroundColor: '#085097',
+	},
+
+
+	footerText: {
+		justifyContent: 'center',
+		alignItems: 'center',
+		color: '#B9BCC2',
+		fontSize: 14,
+	},
+
 })

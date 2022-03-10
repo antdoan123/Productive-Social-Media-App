@@ -1,8 +1,9 @@
 {
   "ExpandedNodes": [
     "",
+    "\\assets",
     "\\Screens"
   ],
-  "SelectedNode": "\\app.json",
+  "SelectedNode": "\\Screens\\LoginScreen.js",
   "PreviewInSolutionExplorer": false
 }
