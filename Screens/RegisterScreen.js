@@ -14,6 +14,10 @@ const RegisterScreen = () => {
 		navigation.replace('Login')
 	}
 
+	const handleTerms = () => {
+		navigation.push('Terms')
+	}
+
 	return(
 		<LinearGradient
 			colors={['#373B44', '#4286f4', '#373B44']}
@@ -111,7 +115,7 @@ const RegisterScreen = () => {
 					/>
 				</View>
 				<Text style={styles.Text}>By registering, you confirm that you accept our 
-					<Text style={styles.link}> Terms of User </Text> 
+					<Text style={styles.link} onPress = {handleTerms}> Terms of User </Text> 
 					and 
 					<Text style={styles.link}> Privacy Policy </Text>
 				</Text>
