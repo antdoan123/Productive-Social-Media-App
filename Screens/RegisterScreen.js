@@ -1,10 +1,17 @@
 import react, {useState} from 'react'
 import { Platform, Image, TextInput, Button, StyleSheet, Text, KeyboardAvoidingView, TouchableOpacity, View} from 'react-native'
 import {LinearGradient} from 'expo-linear-gradient';
+import {useNavigation} from '@react-navigation/core';
 
 const RegisterScreen = () => {
 	const [email, setEmail] = useState ('')
 	const [password, setPassword] = useState ('')
+
+	const navigation = useNavigation()
+
+	const handleSignIn = () => {
+		navigation.replace('Login')
+	}
 
 	return(
 		<LinearGradient
@@ -18,7 +25,7 @@ const RegisterScreen = () => {
 			behavior="padding"
 		>
 			<View style = {styles.titleContainer}>
-				<Text style={styles.titleText}> WELCOME! </Text>
+				<Text style={styles.titleText}> Create Account </Text>
 			</View>
 
 			<View style={styles.inputContainer}>
@@ -54,19 +61,24 @@ const RegisterScreen = () => {
 					style={styles.input}
 					secureTextEntry
 				/>
+				<Text style={styles.Text}>By registering, you confirm that you accept our 
+					<Text style={styles.link}> Terms of User </Text> 
+					and 
+					<Text style={styles.link}> Privacy Policy </Text>
+				</Text>
 
 			</View>
-
+			
 			<View style={styles.buttonContainer}>
 				<TouchableOpacity
-					onPress = {() => { }}
+					onPress = {handleSignIn}
 					style={styles.button}
 				>
 					<Text style={styles.buttonText}>Register</Text>
 				</TouchableOpacity>
 
 				<TouchableOpacity
-					onPress = {() => { }}
+					onPress = {handleSignIn}
 					style={styles.buttonOutline}
 				>
 					<Text style={styles.buttonOutlineText}>Have an Account? Click Here</Text>
@@ -118,14 +130,14 @@ const styles = StyleSheet.create({
 	buttonContainer: {
 		width: '60%',
 		justifyContent: 'center',
-		marginTop: 40,
+		marginTop: 20,
 	},
 
 	button: {
 		backgroundColor: '#085097',
 		width: '100',
 		padding: 15,
-		borderRadius: 10,
+		borderRadius: 15,
 		alignItems: 'center',
 	},
 
@@ -146,6 +158,17 @@ const styles = StyleSheet.create({
 		fontSize: 16,
 	},
 
+	Text: {
+		marginLeft: 5,
+		marginTop: 10,
+		color: '#B9BCC2',
+		fontSize: 16,
+	},
+
+	link: {
+		color: '#085097',
+	},
+
 	bottomContainer:{
 		width: '100%',
 		height: 50,
@@ -157,7 +180,6 @@ const styles = StyleSheet.create({
 		height: 50,
 		backgroundColor: '#085097',
 	},
-
 
 	footerText: {
 		justifyContent: 'center',

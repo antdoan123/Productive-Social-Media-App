@@ -1,11 +1,19 @@
 import react, {useState} from 'react'
 import { Platform, Image, TextInput, Button, StyleSheet, Text, KeyboardAvoidingView, TouchableOpacity, View} from 'react-native'
 import {LinearGradient} from 'expo-linear-gradient';
+import {useNavigation} from '@react-navigation/core';
 
-const LoginScreen = () => {
+const LoginScreen = ({navigation}) => {
 	const [email, setEmail] = useState ('')
 	const [password, setPassword] = useState ('')
 
+	const handleRegistration = () => {
+		navigation.replace('Register')
+	}
+
+	const handleLogin = () => {
+		navigation.replace('Home')
+	}
 	return(
 		<LinearGradient
 			colors={['#373B44', '#4286f4', '#373B44']}
@@ -47,14 +55,14 @@ const LoginScreen = () => {
 
 			<View style={styles.buttonContainer}>
 				<TouchableOpacity
-					onPress = {() => { }}
+					onPress = {handleLogin}
 					style={styles.button}
 				>
 					<Text style={styles.buttonText}>Login</Text>
 				</TouchableOpacity>
 
 				<TouchableOpacity
-					onPress = {() => { }}
+					onPress = {handleRegistration}
 					style={styles.buttonOutline}
 				>
 					<Text style={styles.buttonOutlineText}>Need an Account? Click Here</Text>
