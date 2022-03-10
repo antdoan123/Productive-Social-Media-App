@@ -7,16 +7,15 @@ const LoginScreen = () => {
 	const [password, setPassword] = useState ('')
 
 	return(
-  <LinearGradient
-    colors={['#373B44', '#4286f4', '#373B44']}
-    style={{
-      flex: 1,
-    }}
-  >
+		<LinearGradient
+			colors={['#373B44', '#4286f4', '#373B44']}
+			style={{
+			flex: 1,
+			}}
+		>
 		<KeyboardAvoidingView
 			style={styles.container}
 			behavior="padding"
-
 		>
 			<View style = {styles.titleContainer}>
 				<Image 
