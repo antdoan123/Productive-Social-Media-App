@@ -1,9 +1,10 @@
 {
   "ExpandedNodes": [
     "",
+    "\\.expo-shared",
     "\\assets",
     "\\Screens"
   ],
-  "SelectedNode": "\\Screens\\LoginScreen.js",
+  "SelectedNode": "\\App.js",
   "PreviewInSolutionExplorer": false
 }

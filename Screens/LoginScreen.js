@@ -2,6 +2,7 @@ import react, {useState} from 'react'
 import { Platform, Image, TextInput, Button, StyleSheet, Text, KeyboardAvoidingView, TouchableOpacity, View} from 'react-native'
 import {LinearGradient} from 'expo-linear-gradient';
 import {useNavigation} from '@react-navigation/core';
+import FontAwesome from 'react-native-vector-icons/FontAwesome'
 
 const LoginScreen = ({navigation}) => {
 	const [email, setEmail] = useState ('')
@@ -33,19 +34,33 @@ const LoginScreen = ({navigation}) => {
 			</View>
 
 			<View style={styles.inputContainer}>
-				<TextInput
-					placeholder = "Email"
-					value = {email}
-					onChangeText = {text => setEmail(text)}
-					style={styles.input}
-				/>
-				<TextInput
-					placeholder = "Password"
-					value = {password}
-					onChangeText = {text => setPassword(text)}
-					style={styles.input}
-					secureTextEntry
-				/>
+				<View style={styles.action}>
+					<FontAwesome
+						name="envelope-o"
+						color="#05375a"
+						size={20}
+					/>
+					<TextInput
+						placeholder = "Enter Email..."
+						value = {email}
+						onChangeText = {text => setEmail(text)}
+						style={styles.input}
+					/>
+				</View>
+				<View style={styles.action}>
+					<FontAwesome
+						name="lock"
+						color="#05375a"
+						size={20}
+					/>
+					<TextInput
+						placeholder = "Enter Password..."
+						value = {password}
+						onChangeText = {text => setPassword(text)}
+						style={styles.input}
+						secureTextEntry
+					/>
+				</View>
 				<TouchableOpacity
 					onPress = {() => { }}
 				>
@@ -114,12 +129,19 @@ const styles = StyleSheet.create({
 		width: '80%'
 	},
 
-	input: {
+	action: {
+		flexDirection: 'row',
+		flex: 1,
 		backgroundColor: 'white',
 		paddingHorizontal: 15,
-		paddingVertical: 12,
+		paddingVertical: 15,
 		borderRadius: 15,
 		marginTop: 15,
+	},
+
+	input: {
+		marginLeft:10,
+		width: '100%',
 	},
 
 	forgetlink: {
