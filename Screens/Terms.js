@@ -60,6 +60,96 @@ const Terms = () => {
 				ARBITRATION NOTICE: YOU AGREE THAT DISPUTES BETWEEN YOU AND US WILL BE RESOLVED BY BINDING, INDIVIDUAL ARBITRATION AND YOU WAIVE YOUR RIGHT TO PARTICIPATE IN A CLASS ACTION LAWSUIT OR CLASS-WIDE ARBITRATION. 
 				WE EXPLAIN SOME EXCEPTIONS AND HOW YOU CAN OPT OUT OF ARBITRATION BELOW.
 				</Text>
+
+				<Text style={styles.Title}>
+					The TODOLU Service
+				</Text>
+
+				<Text style={styles.paragraph}>
+					We agree to provide you with the TODOLU Service. The Service includes all of the TODOLU products, features, applications, services, technologies, and software that we provide to advance 
+					TODOLU's mission: To promote productivity and success. The Service is made up of the following aspects:
+				</Text>
+
+				<Text style={styles.paragraph}> 
+					<Text style={styles.Title}>
+						&bull; Offering personalized opportunities to create, connect, communicate, discover, and share. 
+					</Text>
+						People are different. We understand that life can get very chaotic and that each individuals managed their schedule differnetly.
+						So we build a system that try to help you manage your time better and to give other people an idea on how they should manage 
+						their time as well. In order to do that, we allow you to create, plan, customize, and share your schedule to others.
+						This way allows you to experience TODOLU on and off the application.
+				</Text>
+
+				<Text style={styles.paragraph}>
+					<Text style={styles.Title}>
+						&bull; Fostering a positive and safe community.
+					</Text>
+						Working in a community can be very helpful. However, we understand that there are people that will abuse and misuse
+						our community. We will constantly monitor and work to combat abuse and violations of our Terms and policies. We use 
+						all the information we have-including your information-to try to keep our platform secure. We also may share information 
+						about misuse or harmful content with law enforcement.
+				</Text>
+
+				<Text style={styles.paragraph}>
+					<Text style={styles.Title}>
+						&bull; Help dealing with stress and anxiety.
+					</Text>		
+						Life is tough. We get that. From working to studying to dealing with personal issues, we understand that many people will
+						stress and/or experience anxiety. To help out a bit, we implemented a podomoro timer that allows individuals to take a proper
+						break in between study/work time. We also implemented a gaming system to help destressed and escape from reality a bit.
+				</Text>
+
+				<Text style={styles.paragraph}>
+					<Text style={styles.Title}>
+						&bull; Research and innovation
+					</Text>		
+					We use the information we have to study our Service and collaborate with others on research to make our Service better and 
+					contribute to the well-being of our community.
+				</Text>
+
+				<Text style={styles.Title}>
+					Commitments and Requirements
+				</Text>
+
+				<Text style={styles.paragraph}>
+					TODOLU is committed to provide you a safe and productive community. In exchanged, we asked 
+					that you make the below commitments to us.
+				</Text>
+
+				<Text style={styles.Title}>
+					Who Can Use TODOLU.
+				</Text>	
+
+				<Text style={styles.paragraph}>
+					As much as we want everyone to be able to use our applications. We also want it to be safe, secure, and in accordance with
+					the law. So, we need you to commit to a few restrictions in order to be a part of our community.
+				</Text>
+
+				<Text style={styles.paragraph}>
+					&bull; You must be at least 13 years old
+				</Text>
+
+				<Text style={styles.paragraph}>
+					&bull; You must not be prohibited from receiving any aspect of our Service under applicable laws or engaging in payments 
+					related Services if you are on an applicable denied party listing.
+				</Text>
+
+				<Text style={styles.paragraph}>
+					&bull; We must not have previously disabled your account for violation of law or any of our policies.
+				</Text>
+
+				<Text style={styles.paragraph}>
+					&bull; You must not be a convicted sex offender.	
+				</Text>
+
+				<Text style={styles.Title}>
+					Who Can Use TODOLU.
+				</Text>	
+
+				<Text style={styles.paragraph}>
+					As much as we want everyone to be able to use our applications. We also want it to be safe, secure, and in accordance with
+					the law. So, we need you to commit to a few restrictions in order to be a part of our community.
+				</Text>
 			</View>
 			</KeyboardAvoidingView>
 		</LinearGradient>

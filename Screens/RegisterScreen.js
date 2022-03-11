@@ -176,10 +176,10 @@ const styles = StyleSheet.create({
 		flexDirection: 'row',
 		flex: 1,
 		backgroundColor: 'white',
-		paddingHorizontal: 15,
-		paddingVertical: 15,
+		paddingHorizontal: 13,
+		paddingVertical: 13,
 		borderRadius: 15,
-		marginTop: 15,
+		marginTop: 13,
 	},
 
 	input: {
