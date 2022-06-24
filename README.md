@@ -76,7 +76,12 @@ An Android mobile application that allows users to interact with friends and fol
 
 **Flow Navigation** (Screen to Screen)
 
-* Home &#8594; 
+* Home &#8594; Profile &#8594; Home 
+* Home &#8594; Calendar &#8594; Home 
+* Home &#8594; To Do List &#8594; Home 
+* Home &#8594; Timers &#8594; Home 
+* Home &#8594; Music &#8594; Home
+* Home &#8594; Pets &#8594; Home 
 
 ## Digital Wireframe
 insert link here
